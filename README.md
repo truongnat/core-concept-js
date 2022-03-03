@@ -1,6 +1,6 @@
 # core-concept-js
 
-1. Call stack.
+1. [Call stack](./call-stack.md).
 2. Primary Type.
 3. Value Type, Reference types.
 4. Implicit, Explicit, Nominal, Structuring and Duck Typing.
