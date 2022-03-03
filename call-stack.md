@@ -5,3 +5,5 @@
     - Any functions that are called by that function are added to the call stack further up, and run where their calls are reached.
     - When the current function is finished, the interpreter takes it off the stack and resumes execution where it left of in the last code listing.
     - If the stack takes up more space than it had assigned to it, it results in a "stack overflow" error.
+
+> [Demo](http://latentflip.com/loupe)
