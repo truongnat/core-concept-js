@@ -6,4 +6,7 @@
     - When the current function is finished, the interpreter takes it off the stack and resumes execution where it left of in the last code listing.
     - If the stack takes up more space than it had assigned to it, it results in a "stack overflow" error.
 
+
+> *In summary,then, we start an empty Call Stack. Whenever we invoke a function, it is automatically added to the Call Stack. Once the function has executed all off its code, it is automatically removed from the Call Stack. Ultimately, the Stack is empty again.*.
+
 > [Demo](http://latentflip.com/loupe)
