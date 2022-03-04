@@ -1,6 +1,14 @@
 # core-concept-js
 
-1. [When code run ?](./when-code-run.md)
+> Javascript is the Programming Language for the Web.
+> 
+> JavaScript is a high-level, often just-in-time compiled language that conforms to the [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) standard.
+> 
+> JavaScript is a single-threaded programming language.
+
+
+
+1. [When code run?](./when-code-run.md)
 2. [Call stack](./call-stack.md).
 3. [Primary Type](./primary-type.md).
 4. Value Type, Reference types.
@@ -10,7 +18,7 @@
 8. IIFE, Modules, Namespaces.
 9. Queue, Event Loop.
 10. API browser ( setTimeout,setInterval, requestAnimationFrame ).
-12. Js Engines.
+11. Js Engines.
 12. Bitwise operator, Type Arrays and Array Buffers.
 13. DOM, Layout Trees.
 14. Factories and Classes.
