@@ -1,6 +1,6 @@
 # core-concept-js
 
-1. [When code run ?](./when-code-run.md)
+1. [When code run?](./when-code-run.md)
 2. [Call stack](./call-stack.md).
 3. [Primary Type](./primary-type.md).
 4. Value Type, Reference types.
