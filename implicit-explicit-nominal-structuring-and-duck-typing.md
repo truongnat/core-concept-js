@@ -12,6 +12,7 @@
 
 - The case for the + operator
   - 1. Mathematical addition
+  - 2. String concatenation
 
 - Objects.
   - Most Javascript Object conversions usually result in `[object Object]`.
