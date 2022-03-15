@@ -11,10 +11,9 @@
   var a = x;
 
   a = 5
-
- => We copied value from x and assign to a. now a has value is 10, but it not refer to x, a diff x
-
 ```
+=> We copied value from x and assign to a. now a has value is 10, but it not refer to x, a diff x
+
 
 - Objects are created at some location in your computed's memory. When we write `arr = []`, we're created an array in memory.
   What the variable `arr` receives is the address, the location of that array.
@@ -37,8 +36,9 @@
 => When change from `copyRef`, `reference` will be changed.
 
 * Reassigning a Reference: Reassigning a reference variable replaces the old reference.
-
-> var obj = { first : "reference" }
+```
+ var obj = { first : "reference" }
+```
 
  *In memory:*
 
@@ -47,11 +47,14 @@
 | obj       | <#234> | #234    | { first: "reference" } |
 
 
-> When we have a second line:
-> 
-> var obj = { first: 'reference' };
-> 
-> obj = { second: 'ref2' }
+ When we have a second line:
+ 
+ ```
+ var obj = { first: 'reference' };
+ 
+ obj = { second: 'ref2' }
+
+ ```
 
  *In memory:*
 
@@ -73,18 +76,19 @@
 
   - When we pass primitive values into a function, the function copies the values into its parameters. It's effectively the same as using `=`.
 
-> var hundred = 100;
-> 
-> var two = 2;
-> 
-> function multiply(x, y) {
-> 
-> return x * y;
->
-> }
-> 
-> var twoHundred = multiply(hundred, two);
+```
+ var hundred = 100;
+ 
+ var two = 2;
+ 
+ function multiply(x, y) {
+ 
+ return x * y;
 
+ }
+ 
+ var twoHundred = multiply(hundred, two);
+```
 
 | Variables | Values | Address |        Objects         | 
 | --------- | ------ | ------- | ---------------------- |
@@ -98,58 +102,61 @@
  - When we pass object into a function, it pass reference object, but it has two case
    + Modify reference
 
-> function changeAgePure(person) {
->
->    var newPersonObj = JSON.parse(JSON.stringify(person));
->
->    newPersonObj.age = 25;
-> 
->   return newPersonObj;
->
-> }
-> 
-> var alex = {
-> 
->    name: 'Alex',
->
->    age: 30
->
-> };
->
-> var alexChanged = changeAgePure(alex);
->
-> console.log(alex); // -> { name: 'Alex', age: 30 }
->
-> console.log(alexChanged); // -> { name: 'Alex', age: 25  }
+```
+ function changeAgePure(person) {
 
+    var newPersonObj = JSON.parse(JSON.stringify(person));
+
+    newPersonObj.age = 25;
+ 
+   return newPersonObj;
+
+ }
+ 
+ var alex = {
+ 
+    name: 'Alex',
+
+    age: 30
+
+ };
+
+ var alexChanged = changeAgePure(alex);
+
+ console.log(alex); // -> { name: 'Alex', age: 30 }
+
+ console.log(alexChanged); // -> { name: 'Alex', age: 25  }
+
+```
    + Assign new value
 
+```
+ function changeAgePure(person) {
 
-> function changeAgePure(person) {
->
->   person.age = 25;
->   
->   person = { 
->     name: truong,
->     age: 20
->   }
->
->   return person;
->
-> }
-> 
-> var alex = {
-> 
->    name: 'Alex',
->
->    age: 30
->
-> };
->
-> var alexChanged = changeAgePure(alex);
->
-> console.log(alex); // -> { name: 'Alex', age: 30 }
->
-> console.log(alexChanged); // -> { name: 'Alex', age: 25  }
+   person.age = 25;
+   
+   person = { 
+     name: truong,
+     age: 20
+   }
 
+   return person;
+
+ }
+ 
+ var alex = {
+ 
+    name: 'Alex',
+
+    age: 30
+
+ };
+
+ var alexChanged = changeAgePure(alex);
+
+ console.log(alex); // -> { name: 'Alex', age: 30 }
+
+ console.log(alexChanged); // -> { name: 'Alex', age: 25  }
+
+```
 
