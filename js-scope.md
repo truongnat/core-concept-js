@@ -1,0 +1,1 @@
+### Function Scope, Block Scope and Lexical Scope
