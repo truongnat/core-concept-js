@@ -12,7 +12,7 @@
 
   a = 5
 
- => We copied value from x and assign to a. now `a` has value is 10, but it not refer to `x`, `a` diff `x`
+ => We copied value from x and assign to a. now a has value is 10, but it not refer to x, a diff x
 
 ```
 
@@ -62,3 +62,94 @@
 
 * When there are no references to an object remaining, as we see for the address #234 above, the JS engine can perform garbage collection.
 * Now, we can't use the object any more. In this case, we can not access it and is available to the engine for garbage collection. 
+
+
+* Using == and ===
+  - When using ==, we are compare value between two variables ( often compare primitive type ).
+  - When using ===, we are compare location and value between two variables. If variable is object, and first variable diff reference second variable => alway return false.
+
+
+* Passing Parameters through Functions
+
+  - When we pass primitive values into a function, the function copies the values into its parameters. It's effectively the same as using `=`.
+
+> var hundred = 100;
+> 
+> var two = 2;
+> 
+> function multiply(x, y) {
+> 
+> return x * y;
+>
+> }
+> 
+> var twoHundred = multiply(hundred, two);
+
+
+| Variables | Values | Address |        Objects         | 
+| --------- | ------ | ------- | ---------------------- |
+| hundred   | 100    | #333    | function(x,y)          |
+| two       | 2      |         |                        |
+| multiply  | #333   |         |                        |
+| x         | 100    | #333    | function(x,y)          |
+| y         | 2      |         |                        |
+
+
+ - When we pass object into a function, it pass reference object, but it has two case
+   + Modify reference
+
+> function changeAgePure(person) {
+>
+>    var newPersonObj = JSON.parse(JSON.stringify(person));
+>
+>    newPersonObj.age = 25;
+> 
+>   return newPersonObj;
+>
+> }
+> 
+> var alex = {
+> 
+>    name: 'Alex',
+>
+>    age: 30
+>
+> };
+>
+> var alexChanged = changeAgePure(alex);
+>
+> console.log(alex); // -> { name: 'Alex', age: 30 }
+>
+> console.log(alexChanged); // -> { name: 'Alex', age: 25  }
+
+   + Assign new value
+
+
+> function changeAgePure(person) {
+>
+>   person.age = 25;
+>   
+>   person = { 
+>     name: truong,
+>     age: 20
+>   }
+>
+>   return person;
+>
+> }
+> 
+> var alex = {
+> 
+>    name: 'Alex',
+>
+>    age: 30
+>
+> };
+>
+> var alexChanged = changeAgePure(alex);
+>
+> console.log(alex); // -> { name: 'Alex', age: 30 }
+>
+> console.log(alexChanged); // -> { name: 'Alex', age: 25  }
+
+
