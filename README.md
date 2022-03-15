@@ -9,10 +9,10 @@
 
 
 1. [When code run?](./when-code-run.md)
-2. [Call stack](./call-stack.md).
-3. [Primary Type](./primary-type.md).
-4. [Value Type, Reference types](./value-type-reference-types.md).
-5. Implicit, Explicit, Nominal, Structuring and Duck Typing.
+2. [Call stack.](./call-stack.md)
+3. [Primary Type.](./primary-type.md)
+4. [Value Type, Reference types.](./value-type-reference-types.md)
+5. [Implicit, Explicit, Nominal, Structuring and Duck Typing.](./implicit-explicit-nominal-structuring-and-duck-typing.md)
 6. Scope ( Function, Block, Lexical ).
 7. Expression and Statement.
 8. IIFE, Modules, Namespaces.
