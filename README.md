@@ -6,6 +6,7 @@
 > 
 > JavaScript is a single-threaded programming language.
 
+> repo summary from [33 concept js](https://github.com/leonardomso/33-js-concepts)
 
 
 1. [When code run?](./when-code-run.md)
