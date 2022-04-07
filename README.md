@@ -14,7 +14,7 @@
 3. [Primitive Type.](./primitive-type.md)
 4. [Value Type, Reference types.](./value-type-reference-types.md)
 5. [Implicit, Explicit, Nominal, Structuring and Duck Typing.](./implicit-explicit-nominal-structuring-and-duck-typing.md)
-6. Scope ( Function, Block, Lexical ).
+6. [Scope ( Function, Block, Lexical ).](./js-scope.md)
 7. Expression and Statement.
 8. IIFE, Modules, Namespaces.
 9. Queue, Event Loop.
